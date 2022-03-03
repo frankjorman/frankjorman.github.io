@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="submit-form">
+        <input name="Nombre" type="text" placeholder="Nombres" required>
+        <input name="CorreoElectronico" type="text" placeholder="Apellidos" required>
+        <input name="Direccion" type="text" placeholder="Email" required>
+        <input name="NumeroTelefono" type="text" placeholder="Email" required>
+        <input name="Comentarios" type="text" placeholder="Email" required>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw9cxCASg_aefGUR9-UBbAmj6b9Q4LOlSNa2lBn7pZYSHCJJIiMxtng36L2KnhCXzFaxQ/exec'
+            const form = document.forms['submit-form']
+
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+      </script>
+</body>
+</html>
