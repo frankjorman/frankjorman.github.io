@@ -4,17 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
-    <form name="submit-form">
+    <div class="inner contact">
+        <!-- Form Area -->
+        <div class="contact-form">
+            <!-- Form -->
+            <form id="contact-us" name="submit-form">
+                <!-- Left Inputs -->
+                <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                    <!-- Name -->
+                    <input type="text" name="Nombre" id="name" required="required" class="form" placeholder="Nombre" />
+                    <!-- Email -->
+                    <input type="email" name="CorreoElectronico" id="mail" required="required" class="form" placeholder="CorreoElectronico" />
+                    <!-- Subject -->
+                    <input type="text" name="Direccion" id="subject" required="required" class="form" placeholder="Direccion" />
+                    <input type="text" name="NumeroTelefono" id="subject" required="required" class="form" placeholder="NumeroTelefono" />
+                </div><!-- End Left Inputs -->
+                <!-- Right Inputs -->
+                <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                    <!-- Message -->
+                    <textarea name="Comentarios" id="message" class="form textarea"  placeholder="Comentarios"></textarea>
+                </div><!-- End Right Inputs -->
+                <!-- Bottom Submit -->
+                <div class="relative fullwidth col-xs-12">
+                    <!-- Send Button -->
+                    <button type="submit" id="submit" name="submit" class="form-btn semibold">Enviar</button> 
+                </div><!-- End Bottom Submit -->
+                <!-- Clear -->
+                <div class="clear"></div>
+            </form>
+
+            <!-- Your Mail Message -->
+            <div class="mail-message-area">
+                <!-- Message -->
+                <div class="alert gray-bg mail-message not-visible-message">
+                    <strong>Thank You !</strong> Your email has been delivered.
+                </div>
+            </div>
+
+        </div><!-- End Contact Form Area -->
+    </div>
+
+    <!-- <form name="submit-form">
         <input name="Nombre" type="text" placeholder="Nombres" required>
         <input name="CorreoElectronico" type="text" placeholder="Apellidos" required>
         <input name="Direccion" type="text" placeholder="Email" required>
         <input name="NumeroTelefono" type="text" placeholder="Email" required>
         <input name="Comentarios" type="text" placeholder="Email" required>
         <button type="submit">Enviar</button>
-      </form>
+      </form> -->
 
       <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbw9cxCASg_aefGUR9-UBbAmj6b9Q4LOlSNa2lBn7pZYSHCJJIiMxtng36L2KnhCXzFaxQ/exec'
